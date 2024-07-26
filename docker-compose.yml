@@ -1,7 +1,9 @@
 version: '3.8'
 
 services:
-  
+  redis:
+    image: redis:7.0.11-alpine
+
   django:
     container_name: django
     build:
@@ -15,3 +17,5 @@ services:
       - DEBUG=1
       - SECRET_KEY=django-insecure-1z*qbxug75i8w9m^q!!n*yh0zgjxzss@-gmb3h#l$_h+*ku3m2
       - ALLOWED_HOSTS=localhost,127.0.0.1
+    depends_on:
+      - redis
