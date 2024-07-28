@@ -1,5 +1,9 @@
 from celery import shared_task
 
 @shared_task
-def sharedtask():
+def task1():
+    return
+
+@shared_task
+def task2():
     return
