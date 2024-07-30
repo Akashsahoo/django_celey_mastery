@@ -11,7 +11,7 @@ services:
     ports:
       - 8888:8888 # docker will expose this ports
     volumes:
-      - ./dcelery:/usr/src/app
+      - ./flower_data_volume:/data
     depends_on:
       - celery
   rabbitmq:
