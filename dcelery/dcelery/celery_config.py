@@ -39,4 +39,5 @@ if os.path.exists(task_folder) and os.path.isdir(task_folder):
                 if callable(obj):
                     task_modules.append(f'{module_name}.{name}')
     app.autodiscover_tasks(task_modules)
-
+   
+app.autodiscover_tasks()
