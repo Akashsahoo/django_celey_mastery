@@ -5,3 +5,4 @@ db.sqlite3
 __pycache__
 flower_data_volume/
 celerybeat-schedule
+env_vars.txt

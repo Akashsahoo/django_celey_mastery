@@ -8,4 +8,4 @@ class Command(BaseCommand):
 
     def handle(self, *args: Any, **options: Any) -> str | None:
         self.stdout.write("This is my simple task")
-        # print("akash")
+        print("akash")
