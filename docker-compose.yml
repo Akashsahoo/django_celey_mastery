@@ -43,7 +43,7 @@ services:
     container_name: celery
     build:
       context: ./dcelery
-    command: celery --app=dcelery worker --hostname=celeryWorker1@%h  -l INFO -Q tasks,dead_letter -E
+    command: celery --app=dcelery worker --hostname=celeryWorker1@%h  -l INFO -Q tasks,dead_letter -E -B
     volumes:
       - ./dcelery:/usr/src/app/
     
