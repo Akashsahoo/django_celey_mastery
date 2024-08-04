@@ -2,6 +2,12 @@ import os
 from celery import Celery
 from kombu import Queue, Exchange
 import time 
+import sentry_sdk
+
+sentry_sdk.init(
+  dsn= "https://3f58e88b20c510518cd44c6a2b0bf65e@o4507716427841536.ingest.us.sentry.io/4507716441931776",
+  traces_sample_rate=1.0,
+)
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dcelery.settings')
 app = Celery("dcelery")
